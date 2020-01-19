@@ -43,7 +43,7 @@ public class ProductTest {
 
 	@Test(expected = IllegalArgumentException.class)
 	public void testProductWithEmptyName() {
-		new TaxFreeProduct("", new BigDecimal("100.0"));
+		new TaxFreeProduct("  ", new BigDecimal("100.0"));
 	}
 
 	@Test(expected = IllegalArgumentException.class)
