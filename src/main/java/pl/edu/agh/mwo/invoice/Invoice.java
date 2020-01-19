@@ -37,6 +37,14 @@ public class Invoice {
 	}
 
 	public BigDecimal getGrossSum() {
-		return BigDecimal.ZERO;
+		BigDecimal sum = BigDecimal.ZERO;
+
+		for(Product product : this.products.keySet()){
+			Integer quantity = this.products.get(product);
+			sum = sum.add((product.getPrice().add(product.getPrice().multiply(product.getTaxPercent()))).multiply(new BigDecimal(quantity)));
+
+			//sum = sum + (getPrice + getPrice*getTax)*qty
+		}
+		return sum;
 	}
 }
