@@ -13,6 +13,7 @@ public class ProductTest {
 	public void testProductNameIsCorrect() {
 		Product product = new OtherProduct("buty", new BigDecimal("100.0"));
 		Assert.assertEquals("buty", product.getName());
+		System.out.println("changing for making commit");
 	}
 
 	@Test
