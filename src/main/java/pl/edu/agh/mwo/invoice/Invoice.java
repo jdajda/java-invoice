@@ -33,7 +33,7 @@ public class Invoice {
 	}
 
 	public BigDecimal getTax() {
-		return BigDecimal.ZERO;
+		return this.getGrossSum().subtract(this.getNetSum());
 	}
 
 	public BigDecimal getGrossSum() {
