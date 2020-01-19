@@ -18,7 +18,15 @@ public class Invoice {
 	}
 
 	public void addProduct(Product product, Integer quantity) {
+
+		if(quantity <= 0){
+			throw new IllegalArgumentException("poduct name cannot be null");
+		}
+
+
 		this.products.put(product, quantity);
+
+
 	}
 
 	public BigDecimal getNetSum() {
