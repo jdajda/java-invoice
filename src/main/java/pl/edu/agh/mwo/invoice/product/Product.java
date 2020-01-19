@@ -18,6 +18,7 @@ public abstract class Product {
 		this.price = price;
 		this.taxPercent = tax;
 		//test do commitowania
+        // test 2
 	}
 
 	public String getName() {
