@@ -50,5 +50,5 @@ public class ProductTest {
 	public void testProductWithNullPrice() {
 		new DairyProduct("Banany", null);
 	}
-	
+
 }
